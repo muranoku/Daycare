@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">portfolio</string>
+    <string-array name="food">
+        <item>カレー</item>
+        <item>青椒肉絲</item>
+        <item>親子丼</item>
+        <item>肉じゃが</item>
+        <item>パスタ</item>
+        <item>餃子</item>
+    </string-array>
+</resources>
