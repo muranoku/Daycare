@@ -10,18 +10,23 @@
         android:id="@+id/textTit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="デイケア"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="654dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="84dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="5.0"
+        tools:layout_editor_absoluteX="1dp">
 
         <Button
             android:id="@+id/btnCalc"
@@ -36,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="今日の食事" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
