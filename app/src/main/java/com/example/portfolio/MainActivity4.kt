@@ -28,12 +28,28 @@ class MainActivity4 : AppCompatActivity() {
         val button2: Button = findViewById(R.id.button2)
         val button4: Button = findViewById(R.id.button4)
         val button5: Button = findViewById(R.id.button5)
+        val button6: Button = findViewById(R.id.button6)
+
+    //カウント数の表示
+        tvCount.text = "あと4問"
+        foodQ.text = quizTitle[0]
+    //0~3のリストを用意
+        val list = listOf(0,1,2,3)
+        val num = list.shuffled()
 
 
-        button.text = quizData[0][0]
-        button2.text = quizData[0][1]
-        button4.text = quizData[0][2]
-        button5.text = quizData[0][3]
+        button.text = quizData[0][num[0]]
+        button2.text = quizData[0][num[1]]
+        button4.text = quizData[0][num[2]]
+        button5.text = quizData[0][num[3]]
+        button6.isEnabled = false
 
+        button.setOnClickListener {
+            if(button.text == quizData[0][0]){
+                foodQ.text = "正解"
+            }else{
+                foodQ.text = "不正解 Game Over"
+            }
+        }
     }
 }
