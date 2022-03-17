@@ -19,14 +19,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="654dp"
+        android:layout_width="410dp"
+        android:layout_height="44dp"
         android:layout_marginTop="60dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="5.0"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintVertical_bias="0.04">
 
         <Button
             android:id="@+id/btnCalc"
@@ -43,5 +44,17 @@
             android:text="今日の食事" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="129dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="136dp"
+        android:text="フードクイズ"
+        app:backgroundTint="?attr/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

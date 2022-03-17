@@ -45,10 +45,11 @@ class MainActivity4 : AppCompatActivity() {
         button6.isEnabled = false
 
         button.setOnClickListener {
-            if(button.text == quizData[0][0]){
+            if(button.text == quizData[i][0]){
                 foodQ.text = "正解"
             }else{
                 foodQ.text = "不正解 Game Over"
+                button.isEnabled = false
             }
         }
     }
