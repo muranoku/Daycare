@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -46,10 +47,18 @@ class MainActivity4 : AppCompatActivity() {
 
         button.setOnClickListener {
             if(button.text == quizData[i][0]){
-                foodQ.text = "正解"
+                AlertDialog.Builder(this)
+                    .setTitle("正解だよ")
+                    .setPositiveButton("OK",null)
+                    .show()
             }else{
                 foodQ.text = "不正解 Game Over"
                 button.isEnabled = false
+                button2.isEnabled = false
+                button4.isEnabled = false
+                button5.isEnabled = false
+                button6.isEnabled = false
+
             }
         }
     }
