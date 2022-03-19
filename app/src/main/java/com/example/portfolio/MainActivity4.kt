@@ -51,15 +51,33 @@ class MainActivity4 : AppCompatActivity() {
                     .setTitle("正解だよ")
                     .setPositiveButton("OK",null)
                     .show()
-            }else{
-                foodQ.text = "不正解 Game Over"
+
                 button.isEnabled = false
                 button2.isEnabled = false
                 button4.isEnabled = false
                 button5.isEnabled = false
-                button6.isEnabled = false
-
+                button6.isEnabled = true
+            }else{
+                inCorrect()
             }
         }
     }
+
+    //不正解の処理
+    fun inCorrect(){
+        val foodQ : TextView = findViewById(R.id.foodQ)
+        val button: Button = findViewById(R.id.button)
+        val button2: Button = findViewById(R.id.button2)
+        val button4: Button = findViewById(R.id.button4)
+        val button5: Button = findViewById(R.id.button5)
+        val button6: Button = findViewById(R.id.button6)
+
+        foodQ.text = "不正解 Game Over"
+        button.isEnabled = false
+        button2.isEnabled = false
+        button4.isEnabled = false
+        button5.isEnabled = false
+        button6.isEnabled = false
+    }
+
 }
