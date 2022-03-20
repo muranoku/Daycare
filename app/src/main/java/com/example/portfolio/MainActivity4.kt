@@ -63,6 +63,28 @@ class MainActivity4 : AppCompatActivity() {
         }
     }
 
+    private fun correctAns(){
+
+        val button: Button = findViewById(R.id.button)
+        val button2: Button = findViewById(R.id.button2)
+        val button4: Button = findViewById(R.id.button4)
+        val button5: Button = findViewById(R.id.button5)
+        val button6: Button = findViewById(R.id.button6)
+
+        if(button.text == quizData[i][0]) {
+            AlertDialog.Builder(this)
+                .setTitle("正解だよ")
+                .setPositiveButton("OK", null)
+                .show()
+
+            button.isEnabled = false
+            button2.isEnabled = false
+            button4.isEnabled = false
+            button5.isEnabled = false
+            button6.isEnabled = true
+        }
+    }
+
     //不正解の処理
     fun inCorrect(){
         val foodQ : TextView = findViewById(R.id.foodQ)
