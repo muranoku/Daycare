@@ -16,7 +16,7 @@ class MainActivity4 : AppCompatActivity() {
         arrayOf("D0","D1","D2","D3")
     )
 
-    private val i = 0
+    private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,20 +47,57 @@ class MainActivity4 : AppCompatActivity() {
 
         button.setOnClickListener {
             if(button.text == quizData[i][0]){
-                AlertDialog.Builder(this)
-                    .setTitle("正解だよ")
-                    .setPositiveButton("OK",null)
-                    .show()
-
-                button.isEnabled = false
-                button2.isEnabled = false
-                button4.isEnabled = false
-                button5.isEnabled = false
-                button6.isEnabled = true
+               correctAns()
             }else{
                 inCorrect()
             }
         }
+
+        button2.setOnClickListener {
+            if(button.text == quizData[i][0]){
+                correctAns()
+            }else{
+                inCorrect()
+            }
+        }
+
+        button4.setOnClickListener {
+            if(button.text == quizData[i][0]){
+                correctAns()
+            }else{
+                inCorrect()
+            }
+        }
+
+        button5.setOnClickListener {
+            if(button.text == quizData[i][0]){
+                correctAns()
+            }else{
+                inCorrect()
+            }
+        }
+
+    //2問目
+       button6.setOnClickListener {
+           i++
+           val num6 = list.shuffled()
+
+           tvCount.text = "あと" + (4-i) + "問"
+           foodQ.text = quizTitle[i]
+
+           button.text = quizData[i][num[0]]
+           button2.text = quizData[i][num[1]]
+           button4.text = quizData[i][num[2]]
+           button5.text = quizData[i][num[3]]
+
+           button.isEnabled = false
+           button2.isEnabled = false
+           button4.isEnabled = false
+           button5.isEnabled = false
+           button6.isEnabled = true
+       }
+
+
     }
 
     private fun correctAns(){
