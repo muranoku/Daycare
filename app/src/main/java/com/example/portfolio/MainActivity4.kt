@@ -8,7 +8,7 @@ import androidx.appcompat.app.AlertDialog
 
 class MainActivity4 : AppCompatActivity() {
 
-    private val quizTitle = arrayOf("問題A","問題B","問題C","問題D")
+    private val quizTitle = arrayOf("問題1","問題2","問題3","問題4")
     private val quizData = arrayOf(
         arrayOf("A0","A1","A2","A3"),
         arrayOf("B0","B1","B2","B3"),
