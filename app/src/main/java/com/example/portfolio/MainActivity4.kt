@@ -6,11 +6,13 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 
+
+//クイズ機能
 class MainActivity4 : AppCompatActivity() {
 
     private val quizTitle = arrayOf("問題1","問題2","問題3","問題4")
     private val quizData = arrayOf(
-        arrayOf("A0","A1","A2","A3"),
+        arrayOf("タンパク質","脂質","糖質","ビタミン"),
         arrayOf("B0","B1","B2","B3"),
         arrayOf("C0","C1","C2","C3"),
         arrayOf("D0","D1","D2","D3")
